@@ -1,23 +1,23 @@
 <template>
   <div>
     <div v-if="$q.screen.lt.md">
-      <q-img src="img/640x360.webp"/>
+      <q-img rel="preload" src="img/640x360.webp"/>
     </div>
     <div v-if="$q.screen.md">
-      <q-img src="img/1024x576.webp"/>
+      <q-img rel="preload" src="img/1024x576.webp"/>
     </div>
       <div v-if="$q.screen.lg">
-      <q-img src="img/1366x768.webp"/>
+      <q-img rel="preload" src="img/1600x900.webp"/>
     </div>
     <div v-if="($q.screen.xl || $q.screen.gt.xl)">
-      <q-img src="img/1920x1080.webp"/>
+      <q-img rel="preload" src="img/1920x1080.webp"/>
     </div>
     <div class="row q-px-xl q-pb-xl justify-around bg-grey-8 q-gutter-y-xl">
       <div class="col-12 q-pa-md text-center">
-        <div class="text-h4 q-mt-md text-weight-bolder">Como funciona o Método 2 em 1 e porque é tão eficaz</div>
+        <div class="text-h4 q-mt-md text-weight-bolder">Como funciona o nosso método de emagrecimento e porque é tão eficaz</div>
         <div class="text-h4 text-weight-bolder">e leva a perdas superiores a 15 kg</div>
         <div class="text-subtitle1 text-weight-medium q-mt-md">
-        Todo o conteúdo foi cuidadosamente elaborado por profissionais da aréa da saúde, para que você consiga transformar seu corpo, respeitando seu limites, idade e estilo de vida. 
+        Todo o conteúdo foi cuidadosamente elaborado por profissionais da aréa da saúde, para que você consiga transformar seu corpo, respeitando seus limites, idade e estilo de vida. 
       </div>
       </div>
       <div id="div-2" class="col-lg-4 col-md-6 col-sm-6 col-xs-12" v-for="i in beneficiosCards" :key="i.id">
@@ -25,7 +25,7 @@
           <div class="col-md-5 col-sm-12 col-xs-12 text-center q-pb-md">
             <q-btn round>
               <q-avatar size="150px">
-                <img :alt="i.titulo" :src="i.imagem">
+                <img style="height: 150px; width: 150%;" :alt="i.titulo" :src="i.imagem">
               </q-avatar>
               <q-btn
                 fab
@@ -38,8 +38,8 @@
             </q-btn>
           </div>
           <div class="col-md-7 col-sm-12 col-xs-12">
-            <div class="text-h5 text-weight-bold">{{i.titulo}}</div>
-            <div class="text-subtitle2">{{i.subtitulo}}</div>
+            <div class="text-h5 text-weight-bold q-pl-md">{{i.titulo}}</div>
+            <div class="text-subtitle2 q-pl-md">{{i.subtitulo}}</div>
           </div>
         </div>
       </div>
@@ -311,8 +311,8 @@ import { defineComponent } from 'vue'
       ratingModel: 4.6,
       beneficiosCards: [
         { id: '1', imagem: 'img/1.webp', titulo: 'Monte o seu cardápio', subtitulo: 'O Curso contém indicações de cardápio, mas também um passo a passo detalhado de como montar o seu personalizado com diversas receitas.' },
-        { id: '2', imagem: 'img/2.webp', titulo: 'Escolha os exercícios', subtitulo: 'Com base no cardápio selecionado e na quantidade de peso que precisa ser perdida indicamos os melhores exercícios para ajudar na queima de calorias.' },
-        { id: '3', imagem: 'img/3.webp', titulo: 'Fase Inicial', subtitulo: 'Na fase inicial o seu corpo irá perceber a mudança de hábitos e você pode perder até 7 kg só nesta primeira fase.' },
+        { id: '2', imagem: 'img/2.webp', titulo: 'Dieta flexível', subtitulo: 'Com uma variedade de alimentos e receitas, todo o cardápio pode ser totalmente adaptado conforme a sua necessidade.' },
+        { id: '3', imagem: 'img/3.webp', titulo: 'Fase inicial', subtitulo: 'Na fase inicial o seu corpo irá perceber a mudança de hábitos e você pode perder até 7 kg só nesta primeira fase.' },
         { id: '4', imagem: 'img/4.webp', titulo: 'Ativação', subtitulo: 'A perda de peso se intensifica devido aos novos hábitos, o corpo já não armazena gordura e começa a transforma-la em energia e consequentemente você percebe a perda de medidas, aumento de energia e disposição no seu dia a dia.' },
         { id: '5', imagem: 'img/5.webp', titulo: 'Atualização', subtitulo: 'A cada três meses o curso será atualizado e receberá por e-mail sem nenhum custo adicional a nova versão do curso, o que irá garantir uma perda constante de peso.' },
         { id: '6', imagem: 'img/6.webp', titulo: 'Aceleração', subtitulo: 'Com a atualização constante do curso além de economizar você acelera o processo de emagrecimento recebendo novos estimulos a cada 3 meses e consequentemente atingindo o seu objetivo. Há um mudança de hábitos e a perda pode ser superior a 15kg.' }

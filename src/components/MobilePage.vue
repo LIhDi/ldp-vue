@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="row bg-black">
-      <q-img src="./../assets/images/Mobile_cropped.png"/>
+      <q-img src="img/mobile-750x1334.webp"/>
     </div>
   
   <div class="row q-px-lg q-pb-lg justify-around bg-grey-8 q-gutter-y-lg">
@@ -17,7 +17,7 @@
         <div class="col-12 q-pb-md">
           <q-btn round>
             <q-avatar size="150px">
-              <img :src="i.imagem">
+              <img style="height: 150px; width: 150%;" :alt="i.titulo" :src="i.imagem">
             </q-avatar>
             <q-btn
               fab
