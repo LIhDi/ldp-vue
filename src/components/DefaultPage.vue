@@ -1,21 +1,23 @@
 <template>
   <div>
+    <a href="https://api.whatsapp.com/send/?phone=5521966591786&text&type=phone_number&app_absent=0">
+      <q-icon class="fixed-bottom-right z-top q-pa-md" size="4em" name="img:whatsapp.png" /></a>
     <div v-if="$q.screen.lt.md">
-      <q-img rel="preload" src="img/640x360.webp"/>
+      <a href="https://google.com.br"><q-img rel="preload" src="img/640x360.webp"/></a>
     </div>
     <div v-if="$q.screen.md">
-      <q-img rel="preload" src="img/1024x576.webp"/>
+      <a href="https://google.com.br"><q-img rel="preload" src="img/1024x576.webp"/></a>
     </div>
       <div v-if="$q.screen.lg">
-      <q-img rel="preload" src="img/1600x900.webp"/>
+        <a href="https://google.com.br"><q-img rel="preload" src="img/1600x900.webp"/></a>
     </div>
     <div v-if="($q.screen.xl || $q.screen.gt.xl)">
-      <q-img rel="preload" src="img/1920x1080.webp"/>
+      <a href="https://google.com.br"><q-img rel="preload" src="img/1920x1080.webp"/></a>
     </div>
+
     <div class="row q-px-xl q-pb-xl justify-around bg-grey-8 q-gutter-y-xl">
       <div class="col-12 q-pa-md text-center">
-        <div class="text-h4 q-mt-md text-weight-bolder">Como funciona o nosso método de emagrecimento e porque é tão eficaz</div>
-        <div class="text-h4 text-weight-bolder">e leva a perdas superiores a 15 kg</div>
+        <div class="text-h4 q-mt-md text-weight-bolder">Como funciona o nosso desafio 30 dias de emagrecimento</div>
         <div class="text-subtitle1 text-weight-medium q-mt-md">
         Todo o conteúdo foi cuidadosamente elaborado por profissionais da aréa da saúde, para que você consiga transformar seu corpo, respeitando seus limites, idade e estilo de vida. 
       </div>
@@ -23,19 +25,17 @@
       <div id="div-2" class="col-lg-4 col-md-6 col-sm-6 col-xs-12" v-for="i in beneficiosCards" :key="i.id">
         <div class="row">
           <div class="col-md-5 col-sm-12 col-xs-12 text-center q-pb-md">
-            <q-btn round>
-              <q-avatar size="150px">
-                <img style="height: 150px; width: 150%;" :alt="i.titulo" :src="i.imagem">
-              </q-avatar>
+            <div>
+              <q-icon color="warning" size="6.4em" :name="i.imagem" />
               <q-btn
                 fab
-                color="warning"
-                size="22px"
-                class="absolute"
+                color="info"
+                size="15px"
+                class="relative"
                 style="top: 0; right: 0px; transform: translateY(-50%);">
                 <div style="fontSize: 30px;" class="text-white text-weight-bolder">{{i.id}}</div>
               </q-btn>
-            </q-btn>
+            </div>
           </div>
           <div class="col-md-7 col-sm-12 col-xs-12">
             <div class="text-h5 text-weight-bold q-pl-md">{{i.titulo}}</div>
@@ -100,10 +100,10 @@
 
     <div class="row justify-around q-pa-xl q-gutter-y-lg bg-grey-8">
       <div class="col-12 text-h4 text-weight-bolder text-center">
-        Avaliações de quem já comprou o método completo
+        Avaliações de quem já aceitou o desafio
       </div>
       <div class="col-12 text-subtitle2 text-weight-medium text-center">
-        Confira o que os clientes que já compraram versões anteriores disseram sobre o nosso curso.
+        Confira o que os clientes que já compraram versões anteriores disseram sobre o desafio.
       </div>
       <div class="col-md-6 col-sm-5 col-xs-12">
           <q-img fit="fill" src="./../assets/images/dieta-e-academia.jpg"/>
@@ -177,7 +177,7 @@
         O que você precisa saber
       </div>
       <div class="col-12 text-subtitle2 text-weight-medium text-center">
-        Aqui você encontra as principais dúvidas sobre o Método 2 em 1
+        Aqui você encontra as principais dúvidas sobre o Desafio 30 dias
       </div>
       <div class="col-md-12 col-sm-12 col-xs-12 q-pa-md bg-white">
         <q-list bordered class="rounded-borders">
@@ -189,10 +189,10 @@
             </q-card>
           </q-expansion-item>
           <q-separator />
-      <q-expansion-item expand-separator label="Como continuo recebendo as atualizações do curso?" caption="Será enviado um coupom para a próxima atualização">
+      <q-expansion-item expand-separator label="Como continuo recebendo as atualizações do desafio?" caption="Será enviado um coupom para a próxima atualização">
         <q-card>
           <q-card-section>
-            Após o pagamento você terá acesso ao curso completo. Você também terá acesso ao coupom que deverá ser utilizado quando sair a próxima atualização, tornando o curso gratuito.
+            Após o pagamento você terá acesso ao desafio completo. Você também terá acesso ao coupom que deverá ser utilizado quando sair a próxima atualização, tornando o curso gratuito.
           </q-card-section>
         </q-card>
       </q-expansion-item>
@@ -268,7 +268,7 @@
           VOCÊ TEM 7 DIAS DE GARANTIA INCONDICIONAL
         </div>
         <div class="text-subtitle2 q-pb-md">
-          Se por algum motivo você achar que o curso não é pra você, é só entrar em contato por um dos nossos canais de comunicação que devolvemos todo o seu dinheiro.
+          Se por algum motivo você achar que o desafio não é pra você, é só entrar em contato por um dos nossos canais de comunicação que devolvemos todo o seu dinheiro.
         </div>
       </div>
         <div class="col-md-4 col-sm-4 col-xs-12">
@@ -310,12 +310,12 @@ import { defineComponent } from 'vue'
     return {
       ratingModel: 4.6,
       beneficiosCards: [
-        { id: '1', imagem: 'img/1.webp', titulo: 'Monte o seu cardápio', subtitulo: 'O Curso contém indicações de cardápio, mas também um passo a passo detalhado de como montar o seu personalizado com diversas receitas.' },
-        { id: '2', imagem: 'img/2.webp', titulo: 'Dieta flexível', subtitulo: 'Com uma variedade de alimentos e receitas, todo o cardápio pode ser totalmente adaptado conforme a sua necessidade.' },
-        { id: '3', imagem: 'img/3.webp', titulo: 'Fase inicial', subtitulo: 'Na fase inicial o seu corpo irá perceber a mudança de hábitos e você pode perder até 7 kg só nesta primeira fase.' },
-        { id: '4', imagem: 'img/4.webp', titulo: 'Ativação', subtitulo: 'A perda de peso se intensifica devido aos novos hábitos, o corpo já não armazena gordura e começa a transforma-la em energia e consequentemente você percebe a perda de medidas, aumento de energia e disposição no seu dia a dia.' },
-        { id: '5', imagem: 'img/5.webp', titulo: 'Atualização', subtitulo: 'A cada três meses o curso será atualizado e receberá por e-mail sem nenhum custo adicional a nova versão do curso, o que irá garantir uma perda constante de peso.' },
-        { id: '6', imagem: 'img/6.webp', titulo: 'Aceleração', subtitulo: 'Com a atualização constante do curso além de economizar você acelera o processo de emagrecimento recebendo novos estimulos a cada 3 meses e consequentemente atingindo o seu objetivo. Há um mudança de hábitos e a perda pode ser superior a 15kg.' }
+        { id: '1', imagem: 'img:goal.png', titulo: 'O Desafio', subtitulo: 'O nosso Desafio 30 dias contém várias indicações de cardápio, mas também um passo a passo detalhado de como montar o seu personalizado com diversas receitas.' },
+        { id: '2', imagem: 'img:clipboard.png', titulo: 'Siga o protocolo', subtitulo: 'Com uma variedade de alimentos e receitas, todo o cardápio pode ser totalmente adaptado conforme a sua necessidade, não há que sentir peso na consciência o desafio é simples é eficaz.' },
+        { id: '3', imagem: 'img:calendar10.png', titulo: '10 dias', subtitulo: 'Na fase inicial o seu corpo irá perceber a mudança de hábitos e você pode perder até 7 kg só nesta primeira fase.' },
+        { id: '4', imagem: 'img:calendar20.png', titulo: '20 dias', subtitulo: 'A perda de peso se intensifica devido aos novos hábitos, o corpo já não armazena gordura e começa a transforma-la em energia e consequentemente você percebe a perda de medidas, aumento de energia e disposição no seu dia a dia.' },
+        { id: '5', imagem: 'img:calendar30.png', titulo: '30 dias', subtitulo: 'Você chegou na fase final, se chegou até aqui você verá que o desafio realmente mudou a sua vida, com a perda de peso e aumento da autoestima você se sente pronta para novos desafios.' },
+        { id: '6', imagem: 'img:slim.png', titulo: 'Atualização', subtitulo: 'Apenas nos 30 dias de desafio você já vai obter uma grande perda de peso pondendo ser superior a 15kg. Mas caso ainda precise perder mais peso, nós garantimos a atualização constante do desafio acelerando ainda mais o processo de emagrecimento pois o corpo receberá novos estimulos mensalmente e consequentemente atingindo o seu objetivo. ' }
       ],
       starBars: [
         { id: '1', descricao: 'Excelente', valor: 0.8 },
