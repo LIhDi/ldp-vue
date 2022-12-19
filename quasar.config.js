@@ -152,13 +152,13 @@ module.exports = configure(function (ctx) {
       
 
       manifest: {
-        name: `Seca Barriga`,
-        short_name: `Seca Barriga`,
+        name: `Desafio 30 dias`,
+        short_name: `Desafio 30 dias`,
         description: `Método de emagrecimento`,
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',
-        theme_color: '#027be3',
+        theme_color: '#fce24e',
         icons: [
           {
             src: 'icons/icon-128x128.png',
