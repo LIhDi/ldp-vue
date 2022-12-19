@@ -2,9 +2,10 @@
   <div>
     <a href="https://api.whatsapp.com/send/?phone=5521966591786&text&type=phone_number&app_absent=0">
       <q-icon class="fixed-bottom-right z-top q-pa-md" size="4em" name="img:whatsapp.png" /></a>
-    <div class="row bg-black">
-      <a href="https://google.com.br"><q-img src="img/mobile-2-750x1334.webp"/></a>
-    </div>
+      <a href="https://google.com.br">
+      <div class="row bg-black">
+      <q-img rel="preload" src="img/mobile-750x1334.webp"/>
+    </div></a>
   
   <div class="row q-px-lg q-pb-lg justify-around bg-grey-8 q-gutter-y-lg">
     <div class="col-12 q-pa-md text-center">
