@@ -2,7 +2,7 @@
   <div>
     <a href="https://api.whatsapp.com/send/?phone=5521966591786&text&type=phone_number&app_absent=0">
       <q-icon class="fixed-bottom-right z-top q-pa-md" size="4em" name="img:whatsapp.png" /></a>
-      <a href="https://google.com.br">
+      <a href="https://pay.kiwify.com.br/Gqu1EqM">
       <div class="row bg-black">
       <q-img rel="preload" src="img/mobile-750x1334.webp"/>
     </div></a>
@@ -57,17 +57,17 @@
               <div class="col-12 text-center">
                 <q-card-section>
                   <div>
-                    <q-chip square>
+                    <q-chip size="35px" square>
                       <q-avatar icon="bookmark" color="red" text-color="white" />
                       50% OFF
                     </q-chip>
                   </div>
-                  <div class="text-caption text-grey q-pa-sm">
+                  <div class="text-subtitle1 text-grey q-pa-sm">
                     <span class="text-grey-4" style="text-decoration: line-through;">De: R$ 179,90</span>
                     <span class="q-ml-sm">Por: R$ 89,90</span>
                   </div>
                   <div class="text-subtitle2 text-weight-medium q-pa-sm">Ou 12x Sem Juros</div>
-                  <div class="text-h3 text-weight-bolder q-pb-lg">R$ 7,45</div>
+                  <div class="text-h2 text-weight-bolder q-pb-lg">R$ 7,45</div>
                   <q-btn
                   @click="comprarCurso()"
                     color="positive"
@@ -402,7 +402,7 @@ import { defineComponent } from 'vue'
   },
   methods: {
     comprarCurso () {
-      openURL("http://www.google.com.br")
+      openURL("https://pay.kiwify.com.br/Gqu1EqM")
     },
     cadastrarCliente () {
       this.showNotif()
