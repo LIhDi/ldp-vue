@@ -104,7 +104,7 @@ module.exports = configure(function (ctx) {
       // directives: [],
 
       // Quasar plugins
-      plugins: []
+      plugins: ['Notify']
     },
 
     // animations: 'all', // --- includes all animations
@@ -161,31 +161,31 @@ module.exports = configure(function (ctx) {
         theme_color: '#fce24e',
         icons: [
           {
-            src: 'icons/icon-128x128.png',
+            src: 'icons/icon-128x128.webp',
             sizes: '128x128',
             type: 'image/png',
             purpose: 'any maskable'
           },
           {
-            src: 'icons/icon-192x192.png',
+            src: 'icons/icon-192x192.webp',
             sizes: '192x192',
             type: 'image/png',
             purpose: 'any maskable'
           },
           {
-            src: 'icons/icon-256x256.png',
+            src: 'icons/icon-256x256.webp',
             sizes: '256x256',
             type: 'image/png',
             purpose: 'any maskable'
           },
           {
-            src: 'icons/icon-384x384.png',
+            src: 'icons/icon-384x384.webp',
             sizes: '384x384',
             type: 'image/png',
             purpose: 'any maskable'
           },
           {
-            src: 'icons/icon-512x512.png',
+            src: 'icons/icon-512x512.webp',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'any maskable'

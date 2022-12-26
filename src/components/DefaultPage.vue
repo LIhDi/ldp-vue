@@ -22,7 +22,7 @@
         Todo o conteúdo foi cuidadosamente elaborado por profissionais da aréa da saúde, para que você consiga transformar seu corpo, respeitando seus limites, idade e estilo de vida. 
       </div>
       </div>
-      <div id="div-2" class="col-lg-4 col-md-6 col-sm-6 col-xs-12" v-for="i in beneficiosCards" :key="i.id">
+      <div id="borda-circular" class="col-lg-4 col-md-6 col-sm-6 col-xs-12" v-for="i in beneficiosCards" :key="i.id">
         <div class="row">
           <div class="col-md-5 col-sm-12 col-xs-12 text-center q-pb-md">
             <div>
@@ -181,9 +181,9 @@
       </div>
       <div class="col-md-12 col-sm-12 col-xs-12 q-pa-md bg-white">
         <q-list bordered class="rounded-borders">
-          <q-expansion-item expand-separator label="Tenho que pagar todos os meses para continuar recebendo o curso atualizado?" caption="Pagamento único">
+          <q-expansion-item default-opened expand-separator label="Tenho que pagar todos os meses para continuar recebendo o curso atualizado?" caption="Pagamento único">
             <q-card>
-              <q-card-section>
+              <q-card-section class="text-red">
                 Não, o pagamento é efetuado apenas uma vez.
               </q-card-section>
             </q-card>
@@ -279,6 +279,54 @@
           </div>
     </div>
 
+    <div class="q-py-xl q-px-sm bg-black">
+      <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="row justify-around">
+            <div class="col-md-6 col-sm-6 text-center col-xs-6">
+              <q-img style="max-width: 100px" src="./../assets/images/message.png"/>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12 text-center text-white">
+              <div class="text-subtitle2 text-weight-bolder">
+                NÓS ENVIAMOS CONTEÚDOS
+              </div>
+              <div class="text-subtitle2 text-weight-bolder">
+                E OFERTAS INCRÍVEIS!
+              </div>
+              <div class="text-caption">
+                Receba em primeira mão dicas, cupons, lançamentos e promoções exclusivas!
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8 col-sm-8 col-xs-12 q-px-md q-pt-md">
+          <div class="row q-gutter-y-sm q-gutter-x-sm">
+            <div class="col-md-3 col-sm-12 col-xs-12">
+              <div id="borda-circular" class="col-3 bg-white">
+                <q-input dark standout stack-label label-color="grey-2" label="Nome" v-model="cliente.nome" />
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12">
+              <div id="borda-circular" class="col-3 bg-white">
+                <q-input dark standout stack-label label-color="grey-2" label="E-mail" v-model="cliente.email" />
+              </div>
+            </div>
+            <div class="col-md-2 col-sm-12 col-xs-12">
+              <q-btn
+              unelevated
+                id="borda-circular"
+                @click="cadastrarCliente()"
+                color="info"
+                label="CADASTRAR"
+                class="full-width"
+                size="18px"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <div class="row justify-around q-pa-xl q-gutter-y-lg">
       <div class="col-12 text-h4 text-weight-bolder text-center">
         Processo de compra 100% seguro
@@ -302,12 +350,26 @@
 </template>
 
 <script>
+import { useQuasar } from 'quasar'
 import { openURL } from 'quasar'
 import { defineComponent } from 'vue'
   export default defineComponent({
     name: 'DefaultPage',
+    setup () {
+      const $q = useQuasar()
+
+      return {
+      showNotif () {
+        $q.notify({
+          message: 'Cadastro realizado com sucesso.',
+          color: 'positive'
+        })
+      }
+    }
+  },
     data () {
     return {
+      cliente: {nome: '', email: ''},
       ratingModel: 4.6,
       beneficiosCards: [
         { id: '1', imagem: 'img:goal.png', titulo: 'O Desafio', subtitulo: 'O nosso Desafio 30 dias contém várias indicações de cardápio, mas também um passo a passo detalhado de como montar o seu personalizado com diversas receitas.' },
@@ -345,6 +407,10 @@ import { defineComponent } from 'vue'
   methods: {
     comprarCurso () {
       openURL("http://www.google.com.br")
+    },
+    cadastrarCliente () {
+      this.showNotif()
+      this.cliente = {}
     }
   }
 })
@@ -356,8 +422,14 @@ import { defineComponent } from 'vue'
   border-radius: 10px;
   border: 1px solid #afd493
 }
-#div-2{
-  border-radius: 10px;
+#borda-circular{
+  border-radius: 5px;
+}
+.q-field--standout .q-field__control{
+  height: 46px;
+}
+.q-field--dark .q-field__native{
+  color: black
 }
 </style>
   
