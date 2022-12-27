@@ -66,8 +66,8 @@
                     <span class="text-grey-4" style="text-decoration: line-through;">De: R$ 179,90</span>
                     <span class="q-ml-sm">Por: R$ 89,90</span>
                   </div>
-                  <div class="text-subtitle2 text-weight-medium q-pa-sm">Ou 12x Sem Juros</div>
-                  <div class="text-h2 text-weight-bolder q-pb-lg">R$ 7,45</div>
+                  <div class="text-subtitle2 text-weight-medium q-pa-sm">Ou em apenas 12x</div>
+                  <div class="text-h2 text-weight-bolder q-pb-lg">R$ 9,03</div>
                   <q-btn
                   @click="comprarCurso()"
                     color="positive"
@@ -340,6 +340,31 @@
             <div class="text-body2">{{item.descricao}}</div>
           </div>
           </div>
+      </div>
+    </div>
+
+    <div class="row q-pa-lg q-pt-xl bg-grey-8">
+      <div class="col-md-8 col-sm-12 col-xs-12 q-pa-md">
+          <div class="text-left text-weight-bold">
+            Copyright © DESAFIO30DIAS. Todos os direitos reservados.
+          </div>
+          <div class="text-caption text-grey-2 q-mt-md">
+            Todo o conteúdo da página incluindo fotos, imagens, logotipos e layout aqui veículados são de propriedade exclusiva da DESAFIO30DIAS. É vedada qualquer reprodução, total ou parcial, de qualquer elemento da página sem a autorização. A violação de qualquer direito mencionado implicará na responsabilização cível e criminal nos termos da Lei.
+          </div>
+          <div class="text-caption text-grey-2 q-mt-md">
+            Preços e condições de pagamento exclusivos para compras via internet. Vendas sujeitas à análise e confirmação de dados. Os valores dos produtos podem ser alterados a qualquer momento, sem aviso prévio.
+          </div>
+      </div>
+      <div class="col-md-4 col-sm-12 col-xs-12 q-pa-md">
+        <div class="text-left text-weight-bold">
+          Certificados de Segurança da Página
+        </div>
+        <div>
+          <q-img style="max-width: 150px" src="./../assets/images/certificado.png"/>
+          <q-img class="q-ml-sm" style="max-width: 90px" src="./../assets/images/compra-segura.png"/>
+          <q-img class="q-ml-sm" style="max-width: 100px" src="./../assets/images/reclame-aqui.png"/>
+          <q-img class="q-ml-sm" style="max-width: 120px" src="./../assets/images/google-site-seguro.png"/>
+        </div>
       </div>
     </div>
   </div>
