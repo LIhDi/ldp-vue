@@ -1,7 +1,7 @@
 <template>
   <div>
     <a href="https://api.whatsapp.com/send/?phone=5521966591786&text&type=phone_number&app_absent=0">
-      <q-icon class="fixed-bottom-right z-top q-pa-md" size="4em" name="img:whatsapp.png" /></a>
+      <q-icon class="fixed-bottom-right z-top q-pa-md" size="4em" name="img:whatsapp-56x56.webp" /></a>
     <div v-if="$q.screen.lt.md">
       <a href="https://pay.kiwify.com.br/Gqu1EqM"><q-img rel="preload" src="img/640x360.webp"/></a>
     </div>
@@ -18,7 +18,7 @@
       <div class="col-12 q-pa-md text-center">
         <div class="text-h4 q-mt-md text-weight-bolder">Como funciona o nosso desafio 30 dias de emagrecimento</div>
         <div class="text-subtitle1 text-weight-medium q-mt-md">
-        Todo o conteúdo foi cuidadosamente elaborado por profissionais da aréa da saúde, para que você consiga transformar seu corpo, respeitando seus limites, idade e estilo de vida. 
+        Todo o conteúdo foi cuidadosamente elaborado por profissionais da aréa da saúde, para que você consiga transformar seu corpo, respeitando seus limites, idade e estilo de vida.
       </div>
       </div>
       <div id="borda-circular" class="col-lg-4 col-md-6 col-sm-6 col-xs-12" v-for="i in beneficiosCards" :key="i.id">
@@ -56,7 +56,7 @@
             <div class="text-h6 q-mb-xs text-weight-bolder">Curso Completo - 2023</div>
             <div class="text-caption text-grey text-weight-medium q-ml-sm">Cardápio montado por especialistas + Flexível + Fácil de fazer + Perda de peso garantida</div>
             <q-chip square size="lg" class="absolute text-white text-weight-bolder" color="red" style="top: 0; right: 12px; transform: translateY(-50%);">
-                50% DE DESCONTO 
+                50% DE DESCONTO
             </q-chip>
           </q-card-section>
           <q-card-section>
@@ -325,7 +325,7 @@
         </div>
       </div>
     </div>
-    
+
     <div class="row justify-around q-pa-xl q-gutter-y-lg">
       <div class="col-12 text-h4 text-weight-bolder text-center">
         Processo de compra 100% seguro
@@ -397,12 +397,12 @@ import { defineComponent } from 'vue'
       cliente: {nome: '', email: ''},
       ratingModel: 4.6,
       beneficiosCards: [
-        { id: '1', imagem: 'img:goal.png', titulo: 'O Desafio', subtitulo: 'O nosso Desafio 30 dias contém várias indicações de cardápio, mas também um passo a passo detalhado de como montar o seu personalizado com diversas receitas.' },
-        { id: '2', imagem: 'img:clipboard.png', titulo: 'Siga o protocolo', subtitulo: 'Com uma variedade de alimentos e receitas, todo o cardápio pode ser totalmente adaptado conforme a sua necessidade, não há que sentir peso na consciência o desafio é simples é eficaz.' },
-        { id: '3', imagem: 'img:calendar10.png', titulo: '10 dias', subtitulo: 'Na fase inicial o seu corpo irá perceber a mudança de hábitos e você pode perder até 7 kg só nesta primeira fase.' },
-        { id: '4', imagem: 'img:calendar20.png', titulo: '20 dias', subtitulo: 'A perda de peso se intensifica devido aos novos hábitos, o corpo já não armazena gordura e começa a transforma-la em energia e consequentemente você percebe a perda de medidas, aumento de energia e disposição no seu dia a dia.' },
-        { id: '5', imagem: 'img:calendar30.png', titulo: '30 dias', subtitulo: 'Você chegou na fase final, se chegou até aqui você verá que o desafio realmente mudou a sua vida, com a perda de peso e aumento da autoestima você se sente pronta para novos desafios.' },
-        { id: '6', imagem: 'img:slim.png', titulo: 'Atualização', subtitulo: 'Apenas nos 30 dias de desafio você já vai obter uma grande perda de peso pondendo ser superior a 15kg. Mas caso ainda precise perder mais peso, nós garantimos a atualização constante do desafio acelerando ainda mais o processo de emagrecimento pois o corpo receberá novos estimulos mensalmente e consequentemente atingindo o seu objetivo. ' }
+        { id: '1', imagem: 'img:goal-90x90.webp', titulo: 'O Desafio', subtitulo: 'O nosso Desafio 30 dias contém várias indicações de cardápio, mas também um passo a passo detalhado de como montar o seu personalizado com diversas receitas.' },
+        { id: '2', imagem: 'img:clipboard-90x90.webp', titulo: 'Siga o protocolo', subtitulo: 'Com uma variedade de alimentos e receitas, todo o cardápio pode ser totalmente adaptado conforme a sua necessidade, não há que sentir peso na consciência o desafio é simples é eficaz.' },
+        { id: '3', imagem: 'img:calendar10-90x90.webp', titulo: '10 dias', subtitulo: 'Na fase inicial o seu corpo irá perceber a mudança de hábitos e você pode perder até 7 kg só nesta primeira fase.' },
+        { id: '4', imagem: 'img:calendar20-90x90.webp', titulo: '20 dias', subtitulo: 'A perda de peso se intensifica devido aos novos hábitos, o corpo já não armazena gordura e começa a transforma-la em energia e consequentemente você percebe a perda de medidas, aumento de energia e disposição no seu dia a dia.' },
+        { id: '5', imagem: 'img:calendar30-90x90.webp', titulo: '30 dias', subtitulo: 'Você chegou na fase final, se chegou até aqui você verá que o desafio realmente mudou a sua vida, com a perda de peso e aumento da autoestima você se sente pronta para novos desafios.' },
+        { id: '6', imagem: 'img:slim-90x90.webp', titulo: 'Atualização', subtitulo: 'Apenas nos 30 dias de desafio você já vai obter uma grande perda de peso pondendo ser superior a 15kg. Mas caso ainda precise perder mais peso, nós garantimos a atualização constante do desafio acelerando ainda mais o processo de emagrecimento pois o corpo receberá novos estimulos mensalmente e consequentemente atingindo o seu objetivo. ' }
       ],
       starBars: [
         { id: '1', descricao: 'Excelente', valor: 0.8 },
@@ -457,4 +457,3 @@ import { defineComponent } from 'vue'
   color: black
 }
 </style>
-  
