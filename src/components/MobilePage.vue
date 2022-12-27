@@ -1,7 +1,7 @@
 <template>
   <div>
     <a href="https://api.whatsapp.com/send/?phone=5521966591786&text&type=phone_number&app_absent=0">
-      <q-icon class="fixed-bottom-right z-top q-pa-md" size="4em" name="img:whatsapp.png" /></a>
+      <q-icon class="fixed-bottom-right z-top q-pa-md" size="4em" name="img:whatsapp-56x56.webp" /></a>
       <a href="https://pay.kiwify.com.br/Gqu1EqM">
       <div class="row bg-black">
       <q-img rel="preload" src="img/mobile-750x1334.webp"/>
